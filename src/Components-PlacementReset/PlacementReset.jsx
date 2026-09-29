@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./PlacementReset.css";
-
 import Placement from "../assets/PlacementResetAssets/Placement.png";
 import ResearchPaper from "../assets/PlacementResetAssets/ResearchPaper.png";
 import UnifiedPlatform from "../assets/PlacementResetAssets/UnifiedPlatform.png";
