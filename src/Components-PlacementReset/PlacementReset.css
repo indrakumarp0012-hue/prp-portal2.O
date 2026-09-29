@@ -405,6 +405,12 @@
   background: #0c2349;
 }
 
+.placement-reset-login-btn img {
+  width: 16px;
+  height: auto;
+  display: block;
+}
+
 .placement-reset-login-btn:active {
   transform: scale(0.99);
 }
@@ -440,7 +446,9 @@
 
   flex: 1;
 
-  background: #d5d9df;
+  min-width: 0;
+  object-fit: fill;
+  opacity: 0.35;
 }
 
 .placement-reset-resend-btn {
@@ -553,6 +561,12 @@
   color: #a0a7b1;
 
   font-size: 5px;
+}
+
+.placement-reset-footer img {
+  width: 4px;
+  height: 4px;
+  display: block;
 }
 
 
