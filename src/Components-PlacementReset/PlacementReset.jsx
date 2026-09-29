@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "./PlacementReset.css";
 import Placement from "../assets/PlacementResetAssets/Placement.png";
 import ResearchPaper from "../assets/PlacementResetAssets/ResearchPaper.png";
@@ -8,48 +7,31 @@ import ResetLink from "../assets/PlacementResetAssets/ResetLink.png";
 import EmailLink from "../assets/PlacementResetAssets/EmailLink.png";
 import ResendLink from "../assets/PlacementResetAssets/ResendLink.png";
 
+const resendWaitSeconds = 30;
+
 function PlacementReset() {
-  const navigate = useNavigate();
-  const email = "priya01@prp.com";
-  const [resendCooldown, setResendCooldown] = useState(0);
-  const [resendMessage, setResendMessage] = useState("");
+  const email = "priya1@prp.com";
+  const [secondsLeft, setSecondsLeft] = useState(resendWaitSeconds);
 
   useEffect(() => {
-    if (resendCooldown <= 0) {
-      return;
-    }
+    if (secondsLeft === 0) return undefined;
 
-    const timer = window.setInterval(() => {
-      setResendCooldown((previous) => {
-        if (previous <= 1) {
-          window.clearInterval(timer);
-          return 0;
-        }
-
-        return previous - 1;
-      });
+    const timerId = window.setTimeout(() => {
+      setSecondsLeft((previous) => previous - 1);
     }, 1000);
 
-    return () => window.clearInterval(timer);
-  }, [resendCooldown]);
+    return () => window.clearTimeout(timerId);
+  }, [secondsLeft]);
 
   const handleBackToLogin = () => {
-    navigate(-1);
+    window.alert("Back to Login");
   };
 
   const handleResendLink = () => {
-    if (resendCooldown > 0) return;
+    if (secondsLeft > 0) return;
 
-    setResendMessage("Resend simulated. Email delivery is not connected.");
-    setResendCooldown(30);
-  };
-
-  const resendButtonText = () => {
-    if (resendCooldown > 0) {
-      return `Resend in ${resendCooldown}s`;
-    }
-
-    return "Resend Reset Link";
+    window.alert("Reset link has been resent.");
+    setSecondsLeft(resendWaitSeconds);
   };
 
   return (
@@ -156,8 +138,8 @@ function PlacementReset() {
               type="button"
               className="placement-reset-resend-btn"
               onClick={handleResendLink}
-              disabled={resendCooldown > 0}
-              aria-disabled={resendCooldown > 0}
+              disabled={secondsLeft > 0}
+              aria-disabled={secondsLeft > 0}
             >
               <img
                 src={ResendLink}
@@ -165,7 +147,7 @@ function PlacementReset() {
                 aria-hidden="true"
               />
 
-              <span>{resendButtonText()}</span>
+              <span>Resend Reset Link</span>
             </button>
 
             <div
@@ -178,10 +160,9 @@ function PlacementReset() {
             className="placement-reset-timer"
             aria-live="polite"
           >
-            {resendMessage ||
-              (resendCooldown > 0
-                ? `You can request a new link in ${resendCooldown} seconds.`
-                : "You can request a new link now.")}
+            {secondsLeft > 0
+              ? `You can request a new link in ${secondsLeft} seconds.`
+              : "You can request a new link now."}
           </p>
 
           <footer className="placement-reset-footer">
