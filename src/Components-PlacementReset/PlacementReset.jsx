@@ -12,7 +12,6 @@ import Line1 from "../assets/PlacementResetAssets/Line1.png";
 import Point from "../assets/PlacementResetAssets/Point.png";
 import Point1 from "../assets/PlacementResetAssets/point1.png";
 
-
 const resendWaitSeconds = 30;
 
 function PlacementReset() {
