@@ -7,10 +7,7 @@ import ResetLink from "../assets/PlacementResetAssets/ResetLink.png";
 import EmailLink from "../assets/PlacementResetAssets/EmailLink.png";
 import Arrow from "../assets/PlacementResetAssets/Arrow.png";
 import ResendLink from "../assets/PlacementResetAssets/ResendLink.png";
-import Line from "../assets/PlacementResetAssets/Line.png";
-import Line1 from "../assets/PlacementResetAssets/Line1.png";
-import Point from "../assets/PlacementResetAssets/Point.png";
-import Point1 from "../assets/PlacementResetAssets/point1.png";
+
 
 const resendWaitSeconds = 30;
 
@@ -49,8 +46,14 @@ function PlacementReset() {
           </div>
 
           <div className="placement-reset-brand-text">
-            <h3>Placement &amp; Recruitment Platform</h3>
-            <p>Connect • Discover • Succeed</p>
+            <h3>Placement & Recruitment Platform</h3>
+            <div className="placement-reset-brand-meta">
+              <span>Connect</span>
+              <span className="placement-reset-meta-dot" aria-hidden="true" />
+              <span>Discover</span>
+              <span className="placement-reset-meta-dot" aria-hidden="true" />
+              <span>Succeed</span>
+            </div>
           </div>
         </div>
 
@@ -129,7 +132,7 @@ function PlacementReset() {
           </button>
 
           <div className="placement-reset-resend-row">
-            <img className="placement-reset-divider" src={Line} alt="" />
+            <span className="placement-reset-divider" aria-hidden="true" />
 
             <button
               type="button"
@@ -147,7 +150,7 @@ function PlacementReset() {
               <span>Resend Reset Link</span>
             </button>
 
-            <img className="placement-reset-divider" src={Line1} alt="" />
+            <span className="placement-reset-divider" aria-hidden="true" />
           </div>
 
           <p
@@ -162,11 +165,11 @@ function PlacementReset() {
           <footer className="placement-reset-footer">
             <button type="button">Help</button>
 
-            <img src={Point} alt="" aria-hidden="true" />
+            <span className="placement-reset-footer-dot" aria-hidden="true" />
 
             <button type="button">Privacy</button>
 
-            <img src={Point1} alt="" aria-hidden="true" />
+            <span className="placement-reset-footer-dot" aria-hidden="true" />
 
             <button type="button">Terms</button>
           </footer>
