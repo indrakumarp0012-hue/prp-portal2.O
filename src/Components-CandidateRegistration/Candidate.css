@@ -1,0 +1,453 @@
+
+
+.Prp-Candidate-Page {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #17315b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Prp-Candidate-Page *,
+.Prp-Candidate-Page *::before,
+.Prp-Candidate-Page *::after {
+  box-sizing: border-box;
+}
+
+.Prp-Candidate-Layout {
+  display: grid;
+  grid-template-columns: 43% 57%;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: linear-gradient(
+    110deg,
+    #536b96 0%,
+    #8496b3 27%,
+    #d9deE8 49%,
+    #f7f8fb 59%,
+    #fff 66%
+  );
+}
+
+.Prp-Candidate-Left-Panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 5.3vh 7.5% 6vh 19%;
+  background: transparent;
+}
+
+.Prp-Candidate-Brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 25px;
+}
+
+.Prp-Candidate-Brand-Icon {
+  width: 29px;
+  height: 29px;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.Prp-Candidate-Brand-Text h3 {
+  margin: 0 0 4px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.Prp-Candidate-Brand-Text p {
+  margin: 0;
+  color: #fff;
+  font-size: 8px;
+}
+
+.Prp-Candidate-Hero h1 {
+  margin: 0 0 9px;
+  color: #fff;
+  font-size: clamp(20px, 1.6vw, 28px);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.Prp-Candidate-Hero > p {
+  margin: 0 0 22px;
+  color: #fff;
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+.Prp-Candidate-Hero h2 {
+  margin: 0;
+  color: #172f5b;
+  font-size: clamp(13px, 1.25vw, 19px);
+  font-weight: 700;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+
+.Prp-Candidate-Illustration-Wrapper {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 10px 0;
+}
+
+.Prp-Candidate-Illustration {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  max-height: 360px;
+  object-fit: contain;
+}
+
+
+.Prp-Candidate-Footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 43px;
+  padding: 8px 13px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.Prp-Candidate-Footer-Icon {
+  width: 27px;
+  height: 25px;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-right: 1px solid #a4afc1;
+  padding-right: 6px;
+}
+
+.Prp-Candidate-Footer-Text p {
+  margin: 2px 0;
+  color: #64748b;
+  font-size: 9px;
+}
+
+.Prp-Candidate-Right-Panel {
+  min-width: 0;
+  padding: 7.5vh 25% 28px 2.2%;
+  background: transparent;
+}
+
+
+.Prp-Candidate-Form-Header {
+  margin-bottom: 22px;
+}
+
+.Prp-Candidate-Form-Header h1 {
+  margin: 0 0 7px;
+  color: #17315b;
+  font-size: clamp(22px, 1.7vw, 29px);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.Prp-Candidate-Form-Header p {
+  margin: 0;
+  color: #69778d;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+
+.Prp-Candidate-Form {
+  width: 100%;
+}
+
+.Prp-Candidate-Field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin-bottom: 12px;
+}
+
+.Prp-Candidate-Field label {
+  margin-bottom: 6px;
+  color: #405477;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.Prp-Candidate-Field input,
+.Prp-Candidate-Field select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid #dce1eb;
+  border-radius: 5px;
+  outline: none;
+  background: #fff;
+  color: #5f6d81;
+  font-family: inherit;
+  font-size: 10px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.Prp-Candidate-Field input::placeholder {
+  color: #9ba4b2;
+}
+
+.Prp-Candidate-Field select {
+  cursor: pointer;
+}
+
+.Prp-Candidate-Field input:focus,
+.Prp-Candidate-Field select:focus {
+  border-color: #536b96;
+  box-shadow: 0 0 0 2px rgba(83, 107, 150, 0.1);
+}
+
+
+.Prp-Candidate-Role-Field {
+  margin-bottom: 15px;
+}
+
+.Prp-Candidate-Fields-Grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 12px;
+  row-gap: 0;
+}
+
+.Prp-Candidate-Fields-Grid .Prp-Candidate-Field {
+  margin-bottom: 12px;
+}
+
+
+.Prp-Candidate-Password-Wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.Prp-Candidate-Password-Wrapper input {
+  padding-right: 43px;
+}
+
+.Prp-Candidate-Password-Toggle {
+  position: absolute;
+  right: 7px;
+  padding: 4px;
+  border: 0;
+  background: transparent;
+  color: #536b96;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+
+.Prp-Candidate-Terms-Container {
+  margin: 0 0 17px;
+}
+
+.Prp-Candidate-Terms-Label {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  color: #7a8495;
+  font-size: 9px;
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+.Prp-Candidate-Terms-Label input {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  margin: 2px 0 0;
+  accent-color: #172f5b;
+  cursor: pointer;
+}
+
+.Prp-Candidate-Terms-Label a {
+  color: #17315b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.Prp-Candidate-Terms-Label a:hover {
+  text-decoration: underline;
+}
+
+
+.Prp-Candidate-Error {
+  display: block;
+  margin-top: 4px;
+  color: #d92d20;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.Prp-Candidate-Submit-Button {
+  display: block;
+  width: 100%;
+  min-height: 39px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background: #172f5b;
+  color: #fff;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.Prp-Candidate-Submit-Button:hover {
+  background: #25477e;
+}
+
+.Prp-Candidate-Submit-Button:focus-visible {
+  outline: 2px solid #1683ff;
+  outline-offset: 3px;
+}
+
+
+.Prp-Candidate-Login-Text {
+  margin: 14px 0 0;
+  color: #69778d;
+  font-size: 9px;
+  text-align: center;
+}
+
+.Prp-Candidate-Login-Text a {
+  margin-left: 5px;
+  color: #17315b;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.Prp-Candidate-Login-Text a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 1000px) {
+  .Prp-Candidate-Layout {
+    grid-template-columns: 40% 60%;
+  }
+
+  .Prp-Candidate-Left-Panel {
+    padding-right: 7%;
+    padding-left: 9%;
+  }
+
+  .Prp-Candidate-Right-Panel {
+    padding: 5vh 7% 25px 5%;
+  }
+
+  .Prp-Candidate-Hero h2 {
+    white-space: normal;
+  }
+
+  .Prp-Candidate-Illustration {
+    max-width: 300px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .Prp-Candidate-Layout {
+    background: #fff;
+  }
+
+  .Prp-Candidate-Page {
+    padding: 0;
+  }
+
+  .Prp-Candidate-Layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .Prp-Candidate-Left-Panel {
+    min-height: 550px;
+    padding: 25px 22px 20px;
+    background: linear-gradient(
+      145deg,
+      #536b96 0%,
+      #8496b3 55%,
+      #d9dee8 100%
+    );
+  }
+
+  .Prp-Candidate-Brand {
+    margin-bottom: 25px;
+  }
+
+  .Prp-Candidate-Hero h1 {
+    font-size: 25px;
+  }
+
+  .Prp-Candidate-Hero h2 {
+    font-size: 17px;
+  }
+
+  .Prp-Candidate-Illustration-Wrapper {
+    min-height: 200px;
+  }
+
+  .Prp-Candidate-Illustration {
+    max-width: 260px;
+    max-height: 250px;
+  }
+
+  .Prp-Candidate-Right-Panel {
+    padding: 30px 22px;
+  }
+
+  .Prp-Candidate-Form-Header h1 {
+    font-size: 25px;
+  }
+
+  .Prp-Candidate-Fields-Grid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
+  .Prp-Candidate-Field input,
+  .Prp-Candidate-Field select {
+    height: 42px;
+    font-size: 12px;
+  }
+
+  .Prp-Candidate-Submit-Button {
+    min-height: 44px;
+  }
+}
+
+
+@media (max-width: 360px) {
+  .Prp-Candidate-Left-Panel,
+  .Prp-Candidate-Right-Panel {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .Prp-Candidate-Hero h1,
+  .Prp-Candidate-Form-Header h1 {
+    font-size: 22px;
+  }
+}

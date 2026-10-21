@@ -8,8 +8,13 @@ import ForgotPassword from "./Components-ForgotPassword/ForgotPassword";
 import PlacementReset from "./Components-PlacementReset/PlacementReset";
 import ResetPassword from "./ResetPassword/ResetPassword";
 import SuccessfulPage from "./Components-Successfulpage/Successfulpage";
+import Candidate from "./Components-CandidateRegistration/Candidate";
 
 const router = createBrowserRouter([
+	{
+		path: "/register",
+		element: <Candidate />,
+	},
 	{
 		path: "/login",
 		element: <CommonLoginScreen />,
