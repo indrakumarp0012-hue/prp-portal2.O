@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Candidate.css";
 
 import Home from "../assets/CandidateAssets/Home.png";
@@ -8,7 +8,7 @@ import User from "../assets/CandidateAssets/Users.png";
 
 const Candidate = () => {
   const [formData, setFormData] = useState({
-    role: "",
+    role: "Candidate",
     fullName: "",
     email: "",
     mobile: "",
@@ -413,7 +413,7 @@ const Candidate = () => {
             </button>
 
             <p className="Prp-Candidate-Login-Text">
-              Already have an account? <a>Login</a>
+              Already have an account? <a href="/login">Login</a>
             </p>
           </form>
         </section>
