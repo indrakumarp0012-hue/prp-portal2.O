@@ -9,6 +9,7 @@ import PlacementReset from "./Components-PlacementReset/PlacementReset";
 import ResetPassword from "./ResetPassword/ResetPassword";
 import SuccessfulPage from "./Components-Successfulpage/Successfulpage";
 import Candidate from "./Components-CandidateRegistration/Candidate";
+import LandingPage from "./Components-LandingPage/LandingPage";
 
 const router = createBrowserRouter([
 	{
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/",
-		element: <Navigate to="/login" replace />,
+		element: <LandingPage />,
 	},
 	{
 		path: "*",
