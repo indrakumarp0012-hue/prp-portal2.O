@@ -17,13 +17,13 @@ html {
 
 html::-webkit-scrollbar,
 body::-webkit-scrollbar,
-.LandingPage-navigation::-webkit-scrollbar {
+.Prp-Landing-Page-navigation::-webkit-scrollbar {
   display: none;
   width: 0;
   height: 0;
 }
 
-.LandingPage-navigation {
+.Prp-Landing-Page-navigation {
   scrollbar-width: none;
 }
 
@@ -42,7 +42,7 @@ body {
   min-height: 100vh;
 }
 
-.LandingPage-page {
+.Prp-Landing-Page {
   --LandingPage-navy: #142d59;
   --LandingPage-blue: #102754;
   --LandingPage-teal: #14708e;
@@ -56,18 +56,18 @@ body {
   font-family: Roboto, Arial, sans-serif;
 }
 
-.LandingPage-page a,
-.LandingPage-page button {
+.Prp-Landing-Page a,
+.Prp-Landing-Page button {
   font: inherit;
 }
 
-.LandingPage-page a:focus-visible {
+.Prp-Landing-Page a:focus-visible {
   outline: 2px solid #1883a0;
   outline-offset: 3px;
 }
 
 
-.LandingPage-header {
+.Prp-Landing-Page-header {
   display: flex;
   width: 100%;
   min-height: 80px;
@@ -84,7 +84,7 @@ body {
   );
 }
 
-.LandingPage-brand {
+.Prp-Landing-Page-brand {
   display: flex;
   min-width: 205px;
   flex: 0 0 auto;
@@ -97,13 +97,13 @@ body {
   text-decoration: none;
 }
 
-.LandingPage-brand img {
+.Prp-Landing-Page-brand img {
   width: 35px;
   height: 35px;
   object-fit: contain;
 }
 
-.LandingPage-navigation {
+.Prp-Landing-Page-navigation {
   display: flex;
   flex: 1;
   align-items: center;
@@ -112,7 +112,7 @@ body {
   margin: 0 20px;
 }
 
-.LandingPage-nav-link {
+.Prp-Landing-Page-nav-link {
   position: relative;
   display: flex;
   align-items: center;
@@ -124,11 +124,11 @@ body {
   white-space: nowrap;
 }
 
-.LandingPage-nav-link:hover {
+.Prp-Landing-Page-nav-link:hover {
   color: var(--LandingPage-teal);
 }
 
-.LandingPage-nav-link.LandingPage-active::after {
+.Prp-Landing-Page-nav-link.Prp-Landing-Page-active::after {
   position: absolute;
   right: -7px;
   bottom: 0;
@@ -138,14 +138,14 @@ body {
   content: "";
 }
 
-.LandingPage-header-actions {
+.Prp-Landing-Page-header-actions {
   display: flex;
   flex: 0 0 auto;
   gap: 10px;
 }
 
-.LandingPage-login-button,
-.LandingPage-register-button {
+.Prp-Landing-Page-login-button,
+.Prp-Landing-Page-register-button {
   display: inline-flex;
   min-width: 69px;
   min-height: 36px;
@@ -158,16 +158,16 @@ body {
   text-decoration: none;
 }
 
-.LandingPage-login-button {
+.Prp-Landing-Page-login-button {
   background: var(--LandingPage-teal);
 }
 
-.LandingPage-register-button {
+.Prp-Landing-Page-register-button {
   background: var(--LandingPage-blue);
 }
 
 
-.LandingPage-hero {
+.Prp-Landing-Page-hero {
   display: grid;
   width: 100%;
   min-height: 390px;
@@ -183,18 +183,18 @@ body {
   );
 }
 
-.LandingPage-hero-content {
+.Prp-Landing-Page-hero-content {
   min-width: 0;
 }
 
-.LandingPage-eyebrow {
+.Prp-Landing-Page-eyebrow {
   margin: 0 0 22px;
   color: var(--LandingPage-navy);
   font-size: 14px;
   font-weight: 500;
 }
 
-.LandingPage-hero h1 {
+.Prp-Landing-Page-hero h1 {
   margin: 0 0 18px;
   color: var(--LandingPage-navy);
   font-size: clamp(28px, 3vw, 42px);
@@ -203,7 +203,7 @@ body {
   line-height: 1.3;
 }
 
-.LandingPage-hero-description {
+.Prp-Landing-Page-hero-description {
   max-width: 480px;
   margin: 0;
   color: #242a34;
@@ -211,15 +211,15 @@ body {
   line-height: 1.7;
 }
 
-.LandingPage-hero-actions {
+.Prp-Landing-Page-hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 25px;
 }
 
-.LandingPage-primary-button,
-.LandingPage-secondary-button {
+.Prp-Landing-Page-primary-button,
+.Prp-Landing-Page-secondary-button {
   display: inline-flex;
   min-height: 44px;
   align-items: center;
@@ -234,30 +234,30 @@ body {
   transition: transform 160ms ease;
 }
 
-.LandingPage-primary-button {
+.Prp-Landing-Page-primary-button {
   background: #102b5b;
   color: #fff !important;
 }
 
-.LandingPage-secondary-button {
+.Prp-Landing-Page-secondary-button {
   border-color: #e7eaf0;
   background: #fff;
   color: var(--LandingPage-navy);
 }
 
-.LandingPage-primary-button:hover,
-.LandingPage-secondary-button:hover {
+.Prp-Landing-Page-primary-button:hover,
+.Prp-Landing-Page-secondary-button:hover {
   transform: translateY(-2px);
 }
 
-.LandingPage-hero-image {
+.Prp-Landing-Page-hero-image {
   display: flex;
   min-width: 0;
   align-items: center;
   justify-content: center;
 }
 
-.LandingPage-hero-image img {
+.Prp-Landing-Page-hero-image img {
   display: block;
   width: 100%;
   max-width: 460px;
@@ -267,7 +267,7 @@ body {
 }
 
 
-.LandingPage-features-section {
+.Prp-Landing-Page-features-section {
   width: 100%;
   padding: 45px 4.7%;
   background: linear-gradient(
@@ -280,28 +280,28 @@ body {
   text-align: center;
 }
 
-.LandingPage-section-eyebrow {
+.Prp-Landing-Page-section-eyebrow {
   margin: 0 0 20px;
   color: #333334;
   font-size: 14px;
   font-weight: 500;
 }
 
-.LandingPage-section-heading h2 {
+.Prp-Landing-Page-section-heading h2 {
   margin: 0;
   color: #132a56;
   font-size: clamp(18px, 2vw, 25px);
   font-weight: 600;
 }
 
-.LandingPage-feature-grid {
+.Prp-Landing-Page-feature-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 22px;
   margin-top: 35px;
 }
 
-.LandingPage-feature-card {
+.Prp-Landing-Page-feature-card {
   display: flex;
   min-width: 0;
   min-height: 210px;
@@ -315,7 +315,7 @@ body {
   color: var(--LandingPage-navy);
 }
 
-.LandingPage-feature-icon {
+.Prp-Landing-Page-feature-icon {
   display: flex;
   width: 55px;
   height: 55px;
@@ -325,20 +325,20 @@ body {
   margin-bottom: 16px;
 }
 
-.LandingPage-feature-icon img {
+.Prp-Landing-Page-feature-icon img {
   width: 50px;
   height: 50px;
   object-fit: contain;
 }
 
-.LandingPage-feature-card h3 {
+.Prp-Landing-Page-feature-card h3 {
   margin: 0 0 13px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.4;
 }
 
-.LandingPage-feature-card p {
+.Prp-Landing-Page-feature-card p {
   margin: 0;
   color: #3d3d3d;
   font-size: 12px;
@@ -346,7 +346,7 @@ body {
 }
 
 
-.LandingPage-success-section {
+.Prp-Landing-Page-success-section {
   width: 100%;
   padding: 55px 4.7%;
   background: linear-gradient(
@@ -358,22 +358,22 @@ body {
   text-align: center;
 }
 
-.LandingPage-success-section .LandingPage-section-eyebrow {
+.Prp-Landing-Page-success-section .Prp-Landing-Page-section-eyebrow {
   margin-bottom: 20px;
 }
 
-.LandingPage-success-section .LandingPage-section-heading h2 {
+.Prp-Landing-Page-success-section .Prp-Landing-Page-section-heading h2 {
   margin-bottom: 32px;
 }
 
-.LandingPage-testimonial-grid {
+.Prp-Landing-Page-testimonial-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
   text-align: left;
 }
 
-.LandingPage-testimonial-card {
+.Prp-Landing-Page-testimonial-card {
   position: relative;
   display: flex;
   min-width: 0;
@@ -386,7 +386,7 @@ body {
   color: #fff;
 }
 
-.LandingPage-quote-mark {
+.Prp-Landing-Page-quote-mark {
   position: absolute;
   top: 4px;
   right: 16px;
@@ -396,7 +396,7 @@ body {
   font-weight: 700;
 }
 
-.LandingPage-testimonial-person {
+.Prp-Landing-Page-testimonial-person {
   position: relative;
   z-index: 1;
   display: flex;
@@ -404,7 +404,7 @@ body {
   gap: 12px;
 }
 
-.LandingPage-avatar {
+.Prp-Landing-Page-avatar {
   display: flex;
   width: 65px;
   height: 65px;
@@ -414,37 +414,37 @@ body {
   overflow: hidden;
 }
 
-.LandingPage-avatar img {
+.Prp-Landing-Page-avatar img {
   width: 65px;
   height: 65px;
   object-fit: contain;
 }
 
-.LandingPage-person-details {
+.Prp-Landing-Page-person-details {
   min-width: 0;
 }
 
-.LandingPage-stars {
+.Prp-Landing-Page-stars {
   color: #c4c7ce;
   font-size: 11px;
   line-height: 1;
 }
 
-.LandingPage-person-details h3 {
+.Prp-Landing-Page-person-details h3 {
   margin: 5px 0;
   color: #fff;
   font-size: 13px;
   font-weight: 600;
 }
 
-.LandingPage-person-details p {
+.Prp-Landing-Page-person-details p {
   margin: 0;
   color: #b1bdd4;
   font-size: 10px;
   line-height: 1.4;
 }
 
-.LandingPage-testimonial-card blockquote {
+.Prp-Landing-Page-testimonial-card blockquote {
   position: relative;
   z-index: 1;
   margin: 16px 0 0;
@@ -455,7 +455,7 @@ body {
 }
 
 
-.LandingPage-companies-section {
+.Prp-Landing-Page-companies-section {
   width: 100%;
   padding: 35px 6%;
   border-top: 2px solid #7384a2;
@@ -468,7 +468,7 @@ body {
   text-align: center;
 }
 
-.LandingPage-companies-eyebrow {
+.Prp-Landing-Page-companies-eyebrow {
   margin: 0 0 18px;
   color: #fff;
   font-size: 13px;
@@ -476,7 +476,7 @@ body {
   letter-spacing: 2px;
 }
 
-.LandingPage-companies-section h2 {
+.Prp-Landing-Page-companies-section h2 {
   margin: 0 0 30px;
   color: #132a56;
   font-size: 19px;
@@ -484,7 +484,7 @@ body {
   letter-spacing: 1.4px;
 }
 
-.LandingPage-company-list {
+.Prp-Landing-Page-company-list {
   display: flex;
   width: 100%;
   max-width: 1110px;
@@ -495,7 +495,7 @@ body {
   margin: 0 auto;
 }
 
-.LandingPage-company-item {
+.Prp-Landing-Page-company-item {
   display: flex;
   min-width: 70px;
   min-height: 45px;
@@ -504,19 +504,19 @@ body {
   justify-content: center;
 }
 
-.LandingPage-company-item img {
+.Prp-Landing-Page-company-item img {
   width: auto;
   max-width: 110px;
   max-height: 42px;
   object-fit: contain;
 }
 
-.LandingPage-training-anchor {
+.Prp-Landing-Page-training-anchor {
   min-height: 20px;
 }
 
 
-.LandingPage-page .LandingPage-footer {
+.Prp-Landing-Page .Prp-Landing-Page-footer {
   width: 100%;
   min-height: 270px;
   padding: 40px 6.2% 20px;
@@ -528,20 +528,20 @@ body {
   color: #d4d9e6;
 }
 
-.LandingPage-page .LandingPage-footerColumns {
+.Prp-Landing-Page .Prp-Landing-Page-footerColumns {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 45px;
   padding-bottom: 30px;
 }
 
-.LandingPage-page .LandingPage-footerColumn {
+.Prp-Landing-Page .Prp-Landing-Page-footerColumn {
   display: flex;
   min-width: 0;
   flex-direction: column;
 }
 
-.LandingPage-page .LandingPage-footerHeading {
+.Prp-Landing-Page .Prp-Landing-Page-footerHeading {
   margin: 0 0 20px;
   color: #fff;
   font-size: 12px;
@@ -549,8 +549,8 @@ body {
   letter-spacing: 1px;
 }
 
-.LandingPage-page .LandingPage-footerLink,
-.LandingPage-page .LandingPage-legalLink {
+.Prp-Landing-Page .Prp-Landing-Page-footerLink,
+.Prp-Landing-Page .Prp-Landing-Page-legalLink {
   display: block;
   width: fit-content;
   margin-bottom: 12px;
@@ -560,23 +560,23 @@ body {
   text-decoration: none;
 }
 
-.LandingPage-page .LandingPage-footerLink:hover,
-.LandingPage-page .LandingPage-legalLink:hover {
+.Prp-Landing-Page .Prp-Landing-Page-footerLink:hover,
+.Prp-Landing-Page .Prp-Landing-Page-legalLink:hover {
   color: #fff;
 }
 
-.LandingPage-page .LandingPage-legalList {
+.Prp-Landing-Page .Prp-Landing-Page-legalList {
   display: flex;
   flex-direction: column;
 }
 
-.LandingPage-page .LandingPage-footerDivider {
+.Prp-Landing-Page .Prp-Landing-Page-footerDivider {
   width: 100%;
   height: 2px;
   background: #283552;
 }
 
-.LandingPage-page .LandingPage-footerBottom {
+.Prp-Landing-Page .Prp-Landing-Page-footerBottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -584,25 +584,25 @@ body {
   padding-top: 20px;
 }
 
-.LandingPage-page .LandingPage-copyright {
+.Prp-Landing-Page .Prp-Landing-Page-copyright {
   margin: 0;
   color: #aeb8cc;
   font-size: 10px;
 }
 
-.LandingPage-page .LandingPage-social {
+.Prp-Landing-Page .Prp-Landing-Page-social {
   display: flex;
   align-items: center;
   gap: 17px;
 }
 
-.LandingPage-page .LandingPage-social a {
+.Prp-Landing-Page .Prp-Landing-Page-social a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-.LandingPage-page .LandingPage-social img {
+.Prp-Landing-Page .Prp-Landing-Page-social img {
   width: 18px;
   height: 18px;
   object-fit: contain;
@@ -611,77 +611,77 @@ body {
 
 @media (max-width: 1000px) {
 
-  .LandingPage-header {
+  .Prp-Landing-Page-header {
     gap: 10px;
     padding: 12px 14px;
   }
 
-  .LandingPage-brand {
+  .Prp-Landing-Page-brand {
     min-width: auto;
     font-size: 11px;
   }
 
-  .LandingPage-navigation {
+  .Prp-Landing-Page-navigation {
     gap: 12px;
     margin: 0 8px;
   }
 
-  .LandingPage-nav-link {
+  .Prp-Landing-Page-nav-link {
     font-size: 9px;
   }
 
-  .LandingPage-login-button,
-  .LandingPage-register-button {
+  .Prp-Landing-Page-login-button,
+  .Prp-Landing-Page-register-button {
     min-width: 55px;
     padding: 0 10px;
   }
 
-  .LandingPage-hero {
+  .Prp-Landing-Page-hero {
     padding-right: 6%;
     padding-left: 6%;
   }
 
-  .LandingPage-feature-grid {
+  .Prp-Landing-Page-feature-grid {
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 13px;
   }
 
-  .LandingPage-feature-card {
+  .Prp-Landing-Page-feature-card {
     min-height: 190px;
     padding: 18px 8px;
   }
 
-  .LandingPage-feature-card h3 {
+  .Prp-Landing-Page-feature-card h3 {
     font-size: 11px;
   }
 
-  .LandingPage-feature-card p {
+  .Prp-Landing-Page-feature-card p {
     font-size: 10px;
   }
 
-  .LandingPage-testimonial-grid {
+  .Prp-Landing-Page-testimonial-grid {
     gap: 14px;
   }
 
-  .LandingPage-testimonial-card {
+  .Prp-Landing-Page-testimonial-card {
     padding: 18px 14px;
   }
 
-  .LandingPage-company-list {
+  .Prp-Landing-Page-company-list {
     flex-wrap: nowrap;
     gap: 12px;
   }
 
-  .LandingPage-company-item {
+  .Prp-Landing-Page-company-item {
     min-width: 0;
     flex: 1 1 0;
   }
 
-  .LandingPage-company-item img {
+  .Prp-Landing-Page-company-item img {
     max-width: 80px;
   }
 
-  .LandingPage-page .LandingPage-footerColumns {
+  .Prp-Landing-Page .Prp-Landing-Page-footerColumns {
     gap: 25px;
   }
 }
@@ -689,34 +689,34 @@ body {
 
 @media (max-width: 700px) {
 
-  .LandingPage-header {
+  .Prp-Landing-Page-header {
     min-height: 65px;
     flex-wrap: wrap;
     padding: 10px 14px;
   }
 
-  .LandingPage-brand {
+  .Prp-Landing-Page-brand {
     flex: 1;
     font-size: 12px;
   }
 
-  .LandingPage-brand img {
+  .Prp-Landing-Page-brand img {
     width: 32px;
     height: 32px;
   }
 
-  .LandingPage-header-actions {
+  .Prp-Landing-Page-header-actions {
     gap: 7px;
   }
 
-  .LandingPage-login-button,
-  .LandingPage-register-button {
+  .Prp-Landing-Page-login-button,
+  .Prp-Landing-Page-register-button {
     min-width: 55px;
     min-height: 33px;
     font-size: 11px;
   }
 
-  .LandingPage-navigation {
+  .Prp-Landing-Page-navigation {
     order: 3;
     width: 100%;
     height: 38px;
@@ -729,112 +729,112 @@ body {
     scrollbar-width: none;
   }
 
-  .LandingPage-nav-link {
+  .Prp-Landing-Page-nav-link {
     min-height: 35px;
     flex-shrink: 0;
     font-size: 10px;
   }
 
-  .LandingPage-nav-link.LandingPage-active::after {
+  .Prp-Landing-Page-nav-link.Prp-Landing-Page-active::after {
     bottom: 0;
   }
 
-  .LandingPage-hero {
+  .Prp-Landing-Page-hero {
     grid-template-columns: 1fr;
     gap: 25px;
     padding: 40px 7%;
   }
 
-  .LandingPage-hero h1 {
+  .Prp-Landing-Page-hero h1 {
     font-size: 32px;
   }
 
-  .LandingPage-hero-description {
+  .Prp-Landing-Page-hero-description {
     font-size: 14px;
   }
 
-  .LandingPage-hero-image img {
+  .Prp-Landing-Page-hero-image img {
     width: 100%;
     max-height: 240px;
   }
 
-  .LandingPage-features-section {
+  .Prp-Landing-Page-features-section {
     padding: 40px 6%;
   }
 
-  .LandingPage-feature-grid {
+  .Prp-Landing-Page-feature-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px;
   }
 
-  .LandingPage-feature-card {
+  .Prp-Landing-Page-feature-card {
     min-height: 185px;
     padding: 18px 10px;
   }
 
-  .LandingPage-feature-card:last-child {
+  .Prp-Landing-Page-feature-card:last-child {
     grid-column: 1 / -1;
     width: 100%;
     max-width: calc(50% - 7px);
     justify-self: center;
   }
 
-  .LandingPage-success-section {
+  .Prp-Landing-Page-success-section {
     padding: 42px 6%;
   }
 
-  .LandingPage-testimonial-grid {
+  .Prp-Landing-Page-testimonial-grid {
     grid-template-columns: 1fr;
     gap: 17px;
   }
 
-  .LandingPage-testimonial-card {
+  .Prp-Landing-Page-testimonial-card {
     min-height: 190px;
     padding: 22px;
   }
 
-  .LandingPage-testimonial-card blockquote {
+  .Prp-Landing-Page-testimonial-card blockquote {
     font-size: 12px;
   }
 
-  .LandingPage-companies-section {
+  .Prp-Landing-Page-companies-section {
     padding: 32px 6%;
   }
 
-  .LandingPage-company-list {
+  .Prp-Landing-Page-company-list {
     justify-content: center;
     gap: 25px;
   }
 
-  .LandingPage-company-item {
+  .Prp-Landing-Page-company-item {
     min-width: 75px;
     flex: 0 1 25%;
   }
 
-  .LandingPage-company-item img {
+  .Prp-Landing-Page-company-item img {
     max-width: 85px;
   }
 
-  .LandingPage-page .LandingPage-footer {
+  .Prp-Landing-Page .Prp-Landing-Page-footer {
     padding: 32px 7% 20px;
   }
 
-  .LandingPage-page .LandingPage-footerColumns {
+  .Prp-Landing-Page .Prp-Landing-Page-footerColumns {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px 20px;
   }
 
-  .LandingPage-page .LandingPage-footerHeading {
+  .Prp-Landing-Page .Prp-Landing-Page-footerHeading {
     margin-bottom: 14px;
     font-size: 11px;
   }
 
-  .LandingPage-page .LandingPage-footerLink,
-  .LandingPage-page .LandingPage-legalLink {
+  .Prp-Landing-Page .Prp-Landing-Page-footerLink,
+  .Prp-Landing-Page .Prp-Landing-Page-legalLink {
     font-size: 10px;
   }
 
-  .LandingPage-page .LandingPage-footerBottom {
+  .Prp-Landing-Page .Prp-Landing-Page-footerBottom {
     flex-wrap: wrap;
     padding-top: 17px;
   }
@@ -843,49 +843,49 @@ body {
 
 @media (max-width: 380px) {
 
-  .LandingPage-header {
+  .Prp-Landing-Page-header {
     padding-right: 10px;
     padding-left: 10px;
   }
 
-  .LandingPage-brand {
+  .Prp-Landing-Page-brand {
     gap: 7px;
     font-size: 10px;
   }
 
-  .LandingPage-login-button,
-  .LandingPage-register-button {
+  .Prp-Landing-Page-login-button,
+  .Prp-Landing-Page-register-button {
     min-width: 48px;
     padding: 0 7px;
     font-size: 10px;
   }
 
-  .LandingPage-feature-grid {
+  .Prp-Landing-Page-feature-grid {
     grid-template-columns: 1fr;
   }
 
-  .LandingPage-feature-card,
-  .LandingPage-feature-card:last-child {
+  .Prp-Landing-Page-feature-card,
+  .Prp-Landing-Page-feature-card:last-child {
     width: 100%;
     max-width: none;
     grid-column: auto;
   }
 
-  .LandingPage-hero h1 {
+  .Prp-Landing-Page-hero h1 {
     font-size: 28px;
   }
 
-  .LandingPage-hero-actions {
+  .Prp-Landing-Page-hero-actions {
     gap: 10px;
   }
 
-  .LandingPage-primary-button,
-  .LandingPage-secondary-button {
+  .Prp-Landing-Page-primary-button,
+  .Prp-Landing-Page-secondary-button {
     padding: 0 15px;
     font-size: 12px;
   }
 
-  .LandingPage-page .LandingPage-footerColumns {
+  .Prp-Landing-Page .Prp-Landing-Page-footerColumns {
     gap: 25px 12px;
   }
 }
@@ -897,9 +897,9 @@ body {
     scroll-behavior: auto;
   }
 
-  .LandingPage-page *,
-  .LandingPage-page *::before,
-  .LandingPage-page *::after {
+  .Prp-Landing-Page *,
+  .Prp-Landing-Page *::before,
+  .Prp-Landing-Page *::after {
     transition: none !important;
     animation: none !important;
   }

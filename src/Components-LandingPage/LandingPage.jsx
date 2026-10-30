@@ -80,12 +80,12 @@ const companies = [
 
 function LandingPage() {
   return (
-    <main className="LandingPage-page" id="home">
+    <main className="Prp-Landing-Page" id="home">
 
     
-      <header className="LandingPage-header">
+      <header className="Prp-Landing-Page-header">
 
-        <a className="LandingPage-brand" href="#home">
+        <a className="Prp-Landing-Page-brand" href="#home">
           <img src={Home1} alt="Platform logo" />
 
           <span>
@@ -95,45 +95,45 @@ function LandingPage() {
           </span>
         </a>
 
-        <nav className="LandingPage-navigation" aria-label="Main navigation">
-          <a className="LandingPage-nav-link LandingPage-active" href="#home">
+        <nav className="Prp-Landing-Page-navigation" aria-label="Main navigation">
+          <a className="Prp-Landing-Page-nav-link Prp-Landing-Page-active" href="#home">
             Home
           </a>
 
-          <a className="LandingPage-nav-link" href="#features">
+          <a className="Prp-Landing-Page-nav-link" href="#features">
             Features
           </a>
 
-          <a className="LandingPage-nav-link" href="#recruiters">
+          <a className="Prp-Landing-Page-nav-link" href="#recruiters">
             For Recruiters/Employers
           </a>
 
-          <a className="LandingPage-nav-link" href="#training">
+          <a className="Prp-Landing-Page-nav-link" href="#training">
             For Training Institutions
           </a>
 
-          <a className="LandingPage-nav-link" href="#success">
+          <a className="Prp-Landing-Page-nav-link" href="#success">
             Success Stories
           </a>
         </nav>
 
-        <div className="LandingPage-header-actions">
-          <Link to="/login" className="LandingPage-login-button">
+        <div className="Prp-Landing-Page-header-actions">
+          <Link to="/login" className="Prp-Landing-Page-login-button">
             Login
           </Link>
 
-          <Link to="/register" className="LandingPage-register-button">
+          <Link to="/register" className="Prp-Landing-Page-register-button">
             Register
           </Link>
         </div>
 
       </header>
 
-      <section className="LandingPage-hero">
+      <section className="Prp-Landing-Page-hero">
 
-        <div className="LandingPage-hero-content">
+        <div className="Prp-Landing-Page-hero-content">
 
-          <p className="LandingPage-eyebrow">
+          <p className="Prp-Landing-Page-eyebrow">
             BUILD YOUR FUTURE
           </p>
 
@@ -143,19 +143,19 @@ function LandingPage() {
             Get Placed.
           </h1>
 
-          <p className="LandingPage-hero-description">
+          <p className="Prp-Landing-Page-hero-description">
             The all-in-one platform that bridges the gap between
             talented individuals, top employers and training
             institutions.
           </p>
 
-          <div className="LandingPage-hero-actions">
+          <div className="Prp-Landing-Page-hero-actions">
 
-            <Link className="LandingPage-primary-button">
+            <Link className="Prp-Landing-Page-primary-button">
               Get Started
             </Link>
 
-            <Link  className="LandingPage-secondary-button">
+            <Link  className="Prp-Landing-Page-secondary-button">
               Explore Jobs
             </Link>
 
@@ -163,7 +163,7 @@ function LandingPage() {
 
         </div>
 
-        <div className="LandingPage-hero-image">
+        <div className="Prp-Landing-Page-hero-image">
           <img
             src={interview}
             alt="Career and recruitment illustration"
@@ -173,11 +173,11 @@ function LandingPage() {
       </section>
 
       
-      <section className="LandingPage-features-section" id="features">
+      <section className="Prp-Landing-Page-features-section" id="features">
 
-        <div className="LandingPage-section-heading">
+        <div className="Prp-Landing-Page-section-heading">
 
-          <p className="LandingPage-section-eyebrow">
+          <p className="Prp-Landing-Page-section-eyebrow">
             WHY CHOOSE US
           </p>
 
@@ -187,12 +187,12 @@ function LandingPage() {
 
         </div>
 
-        <div className="LandingPage-feature-grid">
+        <div className="Prp-Landing-Page-feature-grid">
 
           {features.map((feature) => (
-            <article className="LandingPage-feature-card" key={feature.title}>
+            <article className="Prp-Landing-Page-feature-card" key={feature.title}>
 
-              <div className="LandingPage-feature-icon">
+              <div className="Prp-Landing-Page-feature-icon">
                 <img src={feature.image} alt="" />
               </div>
 
@@ -208,11 +208,11 @@ function LandingPage() {
       </section>
 
 
-      <section className="LandingPage-success-section" id="success">
+      <section className="Prp-Landing-Page-success-section" id="success">
 
-        <div className="LandingPage-section-heading">
+        <div className="Prp-Landing-Page-section-heading">
 
-          <p className="LandingPage-section-eyebrow">
+          <p className="Prp-Landing-Page-section-eyebrow">
             SUCCESS STORIES
           </p>
 
@@ -220,27 +220,27 @@ function LandingPage() {
 
         </div>
 
-        <div className="LandingPage-testimonial-grid">
+        <div className="Prp-Landing-Page-testimonial-grid">
 
           {testimonials.map((testimonial) => (
             <article
-              className="LandingPage-testimonial-card"
+              className="Prp-Landing-Page-testimonial-card"
               key={testimonial.name}
             >
 
-              <span className="LandingPage-quote-mark" aria-hidden="true">
+              <span className="Prp-Landing-Page-quote-mark" aria-hidden="true">
                 ”
               </span>
 
-              <div className="LandingPage-testimonial-person">
+              <div className="Prp-Landing-Page-testimonial-person">
 
-                <div className="LandingPage-avatar">
+                <div className="Prp-Landing-Page-avatar">
                   <img src={IconamoonOne} alt="" />
                 </div>
 
-                <div className="LandingPage-person-details">
+                <div className="Prp-Landing-Page-person-details">
 
-                  <div className="LandingPage-stars" aria-label="5 out of 5 stars">
+                  <div className="Prp-Landing-Page-stars" aria-label="5 out of 5 stars">
                     ★★★★★
                   </div>
 
@@ -264,18 +264,18 @@ function LandingPage() {
       </section>
 
       
-      <section className="LandingPage-companies-section" id="recruiters">
+      <section className="Prp-Landing-Page-companies-section" id="recruiters">
 
-        <p className="LandingPage-companies-eyebrow">
+        <p className="Prp-Landing-Page-companies-eyebrow">
           TRUSTED BY LEADING COMPANIES
         </p>
 
         <h2>TOP COMPANIES HIRE HERE</h2>
 
-        <div className="LandingPage-company-list">
+        <div className="Prp-Landing-Page-company-list">
 
           {companies.map((company) => (
-            <div className="LandingPage-company-item" key={company.name}>
+            <div className="Prp-Landing-Page-company-item" key={company.name}>
               <img src={company.image} alt={company.name} />
             </div>
           ))}
@@ -286,68 +286,68 @@ function LandingPage() {
 
       
       <div
-        className="LandingPage-training-anchor"
+        className="Prp-Landing-Page-training-anchor"
         id="training"
       />
 
     
-      <footer className="LandingPage-footer">
+      <footer className="Prp-Landing-Page-footer">
 
-        <div className="LandingPage-footerColumns">
+        <div className="Prp-Landing-Page-footerColumns">
 
-          <div className="LandingPage-footerColumn">
+          <div className="Prp-Landing-Page-footerColumn">
 
-            <h4 className="LandingPage-footerHeading">COMPANY</h4>
+            <h4 className="Prp-Landing-Page-footerHeading">COMPANY</h4>
 
-            <a className="LandingPage-footerLink" href="#about">About Us</a>
-            <a className="LandingPage-footerLink" href="#careers">Careers</a>
-            <a className="LandingPage-footerLink" href="#contact">Contact</a>
+            <a className="Prp-Landing-Page-footerLink" href="#about">About Us</a>
+            <a className="Prp-Landing-Page-footerLink" href="#careers">Careers</a>
+            <a className="Prp-Landing-Page-footerLink" href="#contact">Contact</a>
 
           </div>
 
-          <div className="LandingPage-footerColumn">
+          <div className="Prp-Landing-Page-footerColumn">
 
-            <h4 className="LandingPage-footerHeading">PLATFORM</h4>
+            <h4 className="Prp-Landing-Page-footerHeading">PLATFORM</h4>
 
-            <a className="LandingPage-footerLink" href="#features">Job Postings</a>
-            <a className="LandingPage-footerLink" href="#features">AI Resume Matching</a>
-            <a className="LandingPage-footerLink" href="#training">
+            <a className="Prp-Landing-Page-footerLink" href="#features">Job Postings</a>
+            <a className="Prp-Landing-Page-footerLink" href="#features">AI Resume Matching</a>
+            <a className="Prp-Landing-Page-footerLink" href="#training">
               Training & Skill Readiness
             </a>
-            <a className="LandingPage-footerLink" href="#features">
+            <a className="Prp-Landing-Page-footerLink" href="#features">
               Placement Analytics
             </a>
 
           </div>
 
-          <div className="LandingPage-footerColumn">
+          <div className="Prp-Landing-Page-footerColumn">
 
-            <h4 className="LandingPage-footerHeading">SUPPORT</h4>
+            <h4 className="Prp-Landing-Page-footerHeading">SUPPORT</h4>
 
-            <a className="LandingPage-footerLink" href="#support">Help Center</a>
-            <a className="LandingPage-footerLink" href="#faq">FAQ</a>
-            <a className="LandingPage-footerLink" href="#support">Raise Issue</a>
-            <a className="LandingPage-footerLink" href="#contact">
+            <a className="Prp-Landing-Page-footerLink" href="#support">Help Center</a>
+            <a className="Prp-Landing-Page-footerLink" href="#faq">FAQ</a>
+            <a className="Prp-Landing-Page-footerLink" href="#support">Raise Issue</a>
+            <a className="Prp-Landing-Page-footerLink" href="#contact">
               Contact Support
             </a>
 
           </div>
 
-          <div className="LandingPage-footerColumn">
+          <div className="Prp-Landing-Page-footerColumn">
 
-            <h4 className="LandingPage-footerHeading">LEGAL</h4>
+            <h4 className="Prp-Landing-Page-footerHeading">LEGAL</h4>
 
-            <div className="LandingPage-legalList">
+            <div className="Prp-Landing-Page-legalList">
 
-              <a className="LandingPage-legalLink" href="#privacy">
+              <a className="Prp-Landing-Page-legalLink" href="#privacy">
                 Privacy Policy
               </a>
 
-              <a className="LandingPage-legalLink" href="#terms">
+              <a className="Prp-Landing-Page-legalLink" href="#terms">
                 Terms & Conditions
               </a>
 
-              <a className="LandingPage-legalLink" href="#cookies">
+              <a className="Prp-Landing-Page-legalLink" href="#cookies">
                 Cookie Policy
               </a>
 
@@ -357,15 +357,15 @@ function LandingPage() {
 
         </div>
 
-        <div className="LandingPage-footerDivider" />
+        <div className="Prp-Landing-Page-footerDivider" />
 
-        <div className="LandingPage-footerBottom">
+        <div className="Prp-Landing-Page-footerBottom">
 
-          <p className="LandingPage-copyright">
+          <p className="Prp-Landing-Page-copyright">
             © 2026 Placement and Recruitment Platform.
           </p>
 
-          <div className="LandingPage-social">
+          <div className="Prp-Landing-Page-social">
 
             <a href="#facebook" aria-label="Facebook">
               <img src={Group} alt="" />
