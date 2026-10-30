@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import "./LandingPage.css";
 import Home1 from "../assets/LandingPageAssets/Home1.png";
