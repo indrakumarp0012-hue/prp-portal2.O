@@ -425,8 +425,9 @@ body {
 }
 
 .LandingPage-stars {
-  color: #ffc94d;
-  font-size: 13px;
+  color: #c4c7ce;
+  font-size: 11px;
+  line-height: 1;
 }
 
 .LandingPage-person-details h3 {
