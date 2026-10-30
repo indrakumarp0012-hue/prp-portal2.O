@@ -23,32 +23,27 @@ const features = [
   {
     image: WideJob,
     title: "Wide Job Opportunities",
-    description:
-      "Access to thousands of job openings from top companies",
+    description: "Access to thousands of job openings from top companies",
   },
   {
     image: AiResume,
     title: "AI Resume Matching",
-    description:
-      "Get matched with the right jobs using AI technology",
+    description: "Get matched with the right jobs using AI technology",
   },
   {
     image: Skill,
     title: "Training & Skill Readiness",
-    description:
-      "Build in-demand skills with industry-relevant training programs.",
+    description: "Build in-demand skills with industry-relevant training programs.",
   },
   {
     image: Analytics,
     title: "Placement Analytics",
-    description:
-      "Track performance and make data-driven decisions",
+    description: "Track performance and make data-driven decisions",
   },
   {
     image: User,
     title: "For Every User",
-    description:
-      "Tailored benefits for job seekers, recruiters and training institutions",
+    description: "Tailored benefits for job seekers, recruiters and training institutions",
   },
 ];
 
@@ -85,56 +80,62 @@ const companies = [
 
 function LandingPage() {
   return (
-    <main className="lp-page">
-      
-      <header className="lp-header">
-        <a className="lp-brand" href="#home" aria-label="Placement and Recruitment Platform home">
-          <img src={Home1}  />
+    <main className="LandingPage-page" id="home">
+
+    
+      <header className="LandingPage-header">
+
+        <a className="LandingPage-brand" href="#home">
+          <img src={Home1} alt="Platform logo" />
 
           <span>
-            Placement & 
+            Placement &
             <br />
             Recruitment Platform
           </span>
         </a>
 
-        <nav className="lp-navigation" aria-label="Main navigation">
-          <a className="lp-nav-link lp-active" href="#home">
+        <nav className="LandingPage-navigation" aria-label="Main navigation">
+          <a className="LandingPage-nav-link LandingPage-active" href="#home">
             Home
           </a>
 
-          <a className="lp-nav-link" href="#features">
+          <a className="LandingPage-nav-link" href="#features">
             Features
           </a>
 
-          <a className="lp-nav-link" href="#recruiters">
+          <a className="LandingPage-nav-link" href="#recruiters">
             For Recruiters/Employers
           </a>
 
-          <a className="lp-nav-link" href="#training">
+          <a className="LandingPage-nav-link" href="#training">
             For Training Institutions
           </a>
 
-          <a className="lp-nav-link" href="#success">
+          <a className="LandingPage-nav-link" href="#success">
             Success Stories
           </a>
         </nav>
 
-        <div className="lp-header-actions">
-          <Link className="lp-login-button" >
+        <div className="LandingPage-header-actions">
+          <Link to="/login" className="LandingPage-login-button">
             Login
           </Link>
 
-          <Link className="lp-register-button" >
+          <Link to="/register" className="LandingPage-register-button">
             Register
           </Link>
         </div>
+
       </header>
 
-     
-      <section className="lp-hero" id="home">
-        <div className="lp-hero-content">
-          <p className="lp-eyebrow">BUILD YOUR FUTURE</p>
+      <section className="LandingPage-hero">
+
+        <div className="LandingPage-hero-content">
+
+          <p className="LandingPage-eyebrow">
+            BUILD YOUR FUTURE
+          </p>
 
           <h1>
             Connect. Learn.
@@ -142,204 +143,248 @@ function LandingPage() {
             Get Placed.
           </h1>
 
-          <p className="lp-hero-description">
+          <p className="LandingPage-hero-description">
             The all-in-one platform that bridges the gap between
             talented individuals, top employers and training
             institutions.
           </p>
 
-          <div className="lp-hero-actions">
-            <Link className="lp-primary-button" >
+          <div className="LandingPage-hero-actions">
+
+            <Link className="LandingPage-primary-button">
               Get Started
             </Link>
 
-            <a className="lp-secondary-button" >
+            <Link  className="LandingPage-secondary-button">
               Explore Jobs
-            </a>
+            </Link>
+
           </div>
+
         </div>
 
-        <div className="lp-hero-image">
+        <div className="LandingPage-hero-image">
           <img
             src={interview}
             alt="Career and recruitment illustration"
           />
         </div>
+
       </section>
 
       
-      <section className="lp-features-section" id="features">
-        <div className="lp-section-heading">
-          <p className="lp-section-eyebrow">WHY CHOOSE US</p>
+      <section className="LandingPage-features-section" id="features">
 
-          <h2>Everything You Need for a Successful Career</h2>
+        <div className="LandingPage-section-heading">
+
+          <p className="LandingPage-section-eyebrow">
+            WHY CHOOSE US
+          </p>
+
+          <h2>
+            Everything You Need for a Successful Career
+          </h2>
+
         </div>
 
-        <div className="lp-feature-grid">
+        <div className="LandingPage-feature-grid">
+
           {features.map((feature) => (
-            <article
-              className="lp-feature-card"
-              key={feature.title}
-            >
-              <div className="lp-feature-icon">
+            <article className="LandingPage-feature-card" key={feature.title}>
+
+              <div className="LandingPage-feature-icon">
                 <img src={feature.image} alt="" />
               </div>
 
               <h3>{feature.title}</h3>
 
               <p>{feature.description}</p>
+
             </article>
           ))}
+
         </div>
+
       </section>
 
-     
-      <section className="lp-success-section" id="success">
-        <div className="lp-section-heading">
-          <p className="lp-section-eyebrow">SUCCESS STORIES</p>
+
+      <section className="LandingPage-success-section" id="success">
+
+        <div className="LandingPage-section-heading">
+
+          <p className="LandingPage-section-eyebrow">
+            SUCCESS STORIES
+          </p>
 
           <h2>WHAT OUR USERS SAY</h2>
+
         </div>
 
-        <div className="lp-testimonial-grid">
+        <div className="LandingPage-testimonial-grid">
+
           {testimonials.map((testimonial) => (
             <article
-              className="lp-testimonial-card"
+              className="LandingPage-testimonial-card"
               key={testimonial.name}
             >
-              <span
-                className="lp-quote-mark"
-                aria-hidden="true"
-              >
+
+              <span className="LandingPage-quote-mark" aria-hidden="true">
                 ”
               </span>
 
-              <div className="lp-testimonial-person">
-                <div className="lp-avatar">
+              <div className="LandingPage-testimonial-person">
+
+                <div className="LandingPage-avatar">
                   <img src={IconamoonOne} alt="" />
                 </div>
 
-                <div className="lp-person-details">
-                  <div
-                    className="lp-stars"
-                    aria-label="5 out of 5 stars"
-                  >
+                <div className="LandingPage-person-details">
+
+                  <div className="LandingPage-stars" aria-label="5 out of 5 stars">
                     ★★★★★
                   </div>
 
                   <h3>{testimonial.name}</h3>
 
                   <p>{testimonial.role}</p>
+
                 </div>
+
               </div>
 
-              <blockquote>{testimonial.quote}</blockquote>
+              <blockquote>
+                {testimonial.quote}
+              </blockquote>
+
             </article>
           ))}
+
         </div>
+
       </section>
 
-     
-      <section className="lp-companies-section" id="recruiters">
-        <p className="lp-companies-eyebrow">
+      
+      <section className="LandingPage-companies-section" id="recruiters">
+
+        <p className="LandingPage-companies-eyebrow">
           TRUSTED BY LEADING COMPANIES
         </p>
 
         <h2>TOP COMPANIES HIRE HERE</h2>
 
-        <div className="lp-company-list">
+        <div className="LandingPage-company-list">
+
           {companies.map((company) => (
-            <div
-              className="lp-company-item"
-              key={company.name}
-            >
-              <img
-                src={company.image}
-                alt={company.name}
-              />
+            <div className="LandingPage-company-item" key={company.name}>
+              <img src={company.image} alt={company.name} />
             </div>
           ))}
+
         </div>
+
       </section>
 
       
       <div
-        className="lp-training-anchor"
+        className="LandingPage-training-anchor"
         id="training"
       />
 
-      
+    
       <footer className="LandingPage-footer">
+
         <div className="LandingPage-footerColumns">
+
           <div className="LandingPage-footerColumn">
+
             <h4 className="LandingPage-footerHeading">COMPANY</h4>
+
             <a className="LandingPage-footerLink" href="#about">About Us</a>
             <a className="LandingPage-footerLink" href="#careers">Careers</a>
-            <a className="LandingPage-footerLink" href="#contact">contact</a>
+            <a className="LandingPage-footerLink" href="#contact">Contact</a>
+
           </div>
 
           <div className="LandingPage-footerColumn">
+
             <h4 className="LandingPage-footerHeading">PLATFORM</h4>
+
             <a className="LandingPage-footerLink" href="#features">Job Postings</a>
             <a className="LandingPage-footerLink" href="#features">AI Resume Matching</a>
             <a className="LandingPage-footerLink" href="#training">
-              Training & skill Readiness
+              Training & Skill Readiness
             </a>
             <a className="LandingPage-footerLink" href="#features">
               Placement Analytics
             </a>
+
           </div>
 
           <div className="LandingPage-footerColumn">
+
             <h4 className="LandingPage-footerHeading">SUPPORT</h4>
+
             <a className="LandingPage-footerLink" href="#support">Help Center</a>
             <a className="LandingPage-footerLink" href="#faq">FAQ</a>
             <a className="LandingPage-footerLink" href="#support">Raise Issue</a>
             <a className="LandingPage-footerLink" href="#contact">
               Contact Support
             </a>
+
           </div>
 
           <div className="LandingPage-footerColumn">
+
             <h4 className="LandingPage-footerHeading">LEGAL</h4>
+
             <div className="LandingPage-legalList">
+
               <a className="LandingPage-legalLink" href="#privacy">
                 Privacy Policy
               </a>
-              <a
-                className="LandingPage-legalLink LandingPage-legalIndent"
-                href="#terms"
-              >
+
+              <a className="LandingPage-legalLink" href="#terms">
                 Terms & Conditions
               </a>
-              <a
-                className="LandingPage-legalLink LandingPage-legalIndent"
-                href="#cookies"
-              >
+
+              <a className="LandingPage-legalLink" href="#cookies">
                 Cookie Policy
               </a>
+
             </div>
+
           </div>
+
         </div>
 
-        <div className="LandingPage-footerDivider" aria-hidden="true" />
+        <div className="LandingPage-footerDivider" />
+
         <div className="LandingPage-footerBottom">
+
           <p className="LandingPage-copyright">
             © 2026 Placement and Recruitment Platform.
           </p>
+
           <div className="LandingPage-social">
+
             <a href="#facebook" aria-label="Facebook">
               <img src={Group} alt="" />
             </a>
+
             <a href="#twitter" aria-label="Twitter">
               <img src={Twitter} alt="" />
             </a>
+
             <a href="#instagram" aria-label="Instagram">
               <img src={Instagram} alt="" />
             </a>
+
           </div>
+
         </div>
+
       </footer>
+
     </main>
   );
 }

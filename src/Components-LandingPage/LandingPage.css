@@ -1,81 +1,122 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
 
-.lp-page {
-  --lp-navy: #142d59;
-  --lp-blue: #102754;
-  --lp-teal: #14708e;
-  --lp-copy: #333;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.LandingPage-navigation::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.LandingPage-navigation {
+  scrollbar-width: none;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: clip;
+  overflow-y: visible;
+  scrollbar-width: none;
+}
+
+#root {
   width: 100%;
   min-height: 100vh;
-  overflow: hidden;
-  color: var(--lp-navy);
+}
+
+.LandingPage-page {
+  --LandingPage-navy: #142d59;
+  --LandingPage-blue: #102754;
+  --LandingPage-teal: #14708e;
+  --LandingPage-copy: #333;
+
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: clip;
+  color: var(--LandingPage-navy);
   background: #fff;
   font-family: Roboto, Arial, sans-serif;
 }
 
-.lp-page *,
-.lp-page *::before,
-.lp-page *::after {
-  box-sizing: border-box;
-}
-
-.lp-page a,
-.lp-page button {
+.LandingPage-page a,
+.LandingPage-page button {
   font: inherit;
 }
 
-.lp-page a:focus-visible {
+.LandingPage-page a:focus-visible {
   outline: 2px solid #1883a0;
   outline-offset: 3px;
 }
 
-.lp-header {
+
+.LandingPage-header {
   display: flex;
-  height: 80px;
+  width: 100%;
+  min-height: 80px;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: 0 24px 0 13px;
+  padding: 12px 24px 12px 13px;
   border-bottom: 1px solid #8fa8c3;
-  background: linear-gradient(105deg, #768ab0 20%, #f7f8fa 63%, #fff 100%);
+  background: linear-gradient(
+    105deg,
+    #768ab0 20%,
+    #f7f8fa 63%,
+    #fff 100%
+  );
 }
 
-.lp-brand {
+.LandingPage-brand {
   display: flex;
   min-width: 205px;
   flex: 0 0 auto;
   align-items: center;
   gap: 12px;
-  color: var(--lp-navy);
+  color: var(--LandingPage-navy);
   font-size: 15px;
   font-weight: 600;
   line-height: 16px;
   text-decoration: none;
 }
 
-.lp-brand img {
-  display: block;
+.LandingPage-brand img {
   width: 35px;
   height: 35px;
-  flex: 0 0 auto;
   object-fit: contain;
 }
 
-.lp-navigation {
+.LandingPage-navigation {
   display: flex;
-  height: 100%;
   flex: 1;
   align-items: center;
   justify-content: space-between;
-  gap: clamp(15px, 3.5vw, 55px);
-  margin: 0 28px;
+  gap: 20px;
+  margin: 0 20px;
 }
 
-.lp-nav-link {
+.LandingPage-nav-link {
   position: relative;
   display: flex;
-  height: 100%;
   align-items: center;
+  min-height: 45px;
   color: #071b3e;
   font-size: 11px;
   font-weight: 500;
@@ -83,780 +124,782 @@
   white-space: nowrap;
 }
 
-.lp-nav-link:hover {
-  color: var(--lp-teal);
+.LandingPage-nav-link:hover {
+  color: var(--LandingPage-teal);
 }
 
-.lp-nav-link.lp-active::after {
+.LandingPage-nav-link.LandingPage-active::after {
   position: absolute;
   right: -7px;
-  bottom: 13px;
+  bottom: 0;
   left: -7px;
   height: 2px;
-  background: var(--lp-navy);
+  background: var(--LandingPage-navy);
   content: "";
 }
 
-.lp-header-actions {
+.LandingPage-header-actions {
   display: flex;
   flex: 0 0 auto;
   gap: 10px;
 }
 
-.lp-login-button,
-.lp-register-button {
+.LandingPage-login-button,
+.LandingPage-register-button {
   display: inline-flex;
   min-width: 69px;
-  height: 31px;
+  min-height: 36px;
   align-items: center;
   justify-content: center;
   padding: 0 17px;
-  border: 0;
   border-radius: 6px;
   color: #fff !important;
-  font-size: 11px;
+  font-size: 12px;
   text-decoration: none;
 }
 
-.lp-login-button {
-  background: var(--lp-teal);
+.LandingPage-login-button {
+  background: var(--LandingPage-teal);
 }
 
-.lp-register-button {
-  background: var(--lp-blue);
+.LandingPage-register-button {
+  background: var(--LandingPage-blue);
 }
 
-.lp-hero {
+
+.LandingPage-hero {
   display: grid;
-  min-height: 368px;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  width: 100%;
+  min-height: 390px;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 35px;
-  padding: 38px 8.3%;
-  background: linear-gradient(105deg, #536b94 0%, #aebbd0 39%, #fff 77%);
+  padding: 45px 8.3%;
+  background: linear-gradient(
+    105deg,
+    #536b94 0%,
+    #aebbd0 39%,
+    #fff 77%
+  );
 }
 
-.lp-hero-content {
+.LandingPage-hero-content {
   min-width: 0;
-  padding-top: 1px;
 }
 
-.lp-eyebrow {
+.LandingPage-eyebrow {
   margin: 0 0 22px;
-  color: var(--lp-navy);
+  color: var(--LandingPage-navy);
   font-size: 14px;
   font-weight: 500;
 }
 
-.lp-hero h1 {
+.LandingPage-hero h1 {
   margin: 0 0 18px;
-  color: var(--lp-navy);
-  font-size: 25px;
+  color: var(--LandingPage-navy);
+  font-size: clamp(28px, 3vw, 42px);
   font-weight: 600;
   letter-spacing: -0.5px;
-  line-height: 1.45;
+  line-height: 1.3;
 }
 
-.lp-hero-description {
+.LandingPage-hero-description {
   max-width: 480px;
   margin: 0;
   color: #242a34;
-  font-size: 14px;
-  line-height: 1.55;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
-.lp-hero-actions {
+.LandingPage-hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 23px;
+  margin-top: 25px;
 }
 
-.lp-primary-button,
-.lp-secondary-button {
+.LandingPage-primary-button,
+.LandingPage-secondary-button {
   display: inline-flex;
-  min-height: 42px;
+  min-height: 44px;
   align-items: center;
   justify-content: center;
-  padding: 0 23px;
+  padding: 0 24px;
   border: 1px solid transparent;
   border-radius: 10px;
-  box-shadow: 0 3px 2px #142d593b;
+  box-shadow: 0 3px 5px #142d593b;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
-  transition: transform 160ms ease, box-shadow 160ms ease;
+  transition: transform 160ms ease;
 }
 
-.lp-primary-button {
-  border-color: #102b5b;
+.LandingPage-primary-button {
   background: #102b5b;
   color: #fff !important;
 }
 
-.lp-secondary-button {
+.LandingPage-secondary-button {
   border-color: #e7eaf0;
   background: #fff;
-  color: var(--lp-navy);
+  color: var(--LandingPage-navy);
 }
 
-.lp-primary-button:hover,
-.lp-secondary-button:hover {
+.LandingPage-primary-button:hover,
+.LandingPage-secondary-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 8px #142d593b;
 }
 
-.lp-hero-image {
+.LandingPage-hero-image {
   display: flex;
   min-width: 0;
   align-items: center;
   justify-content: center;
 }
 
-.lp-hero-image img {
+.LandingPage-hero-image img {
   display: block;
-  width: min(100%, 460px);
-  height: 270px;
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  max-height: 310px;
   object-fit: contain;
 }
 
-.lp-features-section {
-  min-height: 355px;
-  padding: 32px 4.7% 25px;
-  background: linear-gradient(100deg, #768ab0 20%, #9ba1ad 73%, #fff 100%);
-  color: var(--lp-navy);
+
+.LandingPage-features-section {
+  width: 100%;
+  padding: 45px 4.7%;
+  background: linear-gradient(
+    100deg,
+    #768ab0 20%,
+    #9ba1ad 73%,
+    #fff 100%
+  );
+  color: var(--LandingPage-navy);
   text-align: center;
 }
 
-.lp-section-eyebrow {
-  margin: 0 0 23px;
+.LandingPage-section-eyebrow {
+  margin: 0 0 20px;
   color: #333334;
   font-size: 14px;
   font-weight: 500;
 }
 
-.lp-section-heading h2 {
+.LandingPage-section-heading h2 {
   margin: 0;
   color: #132a56;
-  font-size: 16px;
+  font-size: clamp(18px, 2vw, 25px);
   font-weight: 600;
 }
 
-.lp-feature-grid {
+.LandingPage-feature-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 30px;
-  margin-top: 29px;
+  gap: 22px;
+  margin-top: 35px;
 }
 
-.lp-feature-card {
+.LandingPage-feature-card {
   display: flex;
   min-width: 0;
-  height: 200px;
+  min-height: 210px;
   flex-direction: column;
   align-items: center;
-  padding: 15px 9px 12px;
+  justify-content: flex-start;
+  padding: 22px 12px;
   border: 1px solid #6c9bbd;
   border-radius: 13px;
   background: #fff;
-  color: var(--lp-navy);
+  color: var(--LandingPage-navy);
 }
 
-.lp-feature-icon {
+.LandingPage-feature-icon {
   display: flex;
-  width: 52px;
-  height: 52px;
-  flex: 0 0 auto;
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  margin-bottom: 15px;
-  border-radius: 50%;
+  margin-bottom: 16px;
 }
 
-.lp-feature-icon img {
+.LandingPage-feature-icon img {
   width: 50px;
   height: 50px;
   object-fit: contain;
 }
 
-.lp-feature-card h3 {
-  margin: 0 0 17px;
+.LandingPage-feature-card h3 {
+  margin: 0 0 13px;
   font-size: 14px;
-  font-weight: 400;
-  letter-spacing: -0.3px;
-  line-height: 1.25;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
-.lp-feature-card p {
+.LandingPage-feature-card p {
   margin: 0;
   color: #3d3d3d;
   font-size: 12px;
-  line-height: 1.35;
+  line-height: 1.6;
 }
 
-.lp-success-section {
-  min-height: 373px;
-  padding: 57px 4.7% 50px;
-  background: linear-gradient(105deg, #536b94 0%, #c3ccdb 48%, #fff 75%);
+
+.LandingPage-success-section {
+  width: 100%;
+  padding: 55px 4.7%;
+  background: linear-gradient(
+    105deg,
+    #536b94 0%,
+    #c3ccdb 48%,
+    #fff 75%
+  );
   text-align: center;
 }
 
-.lp-success-section .lp-section-eyebrow {
-  margin-bottom: 23px;
-  color: #333334;
+.LandingPage-success-section .LandingPage-section-eyebrow {
+  margin-bottom: 20px;
 }
 
-.lp-success-section .lp-section-heading h2 {
-  margin-bottom: 29px;
-  color: #132a56;
-  font-size: 16px;
+.LandingPage-success-section .LandingPage-section-heading h2 {
+  margin-bottom: 32px;
 }
 
-.lp-testimonial-grid {
+.LandingPage-testimonial-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 21px;
+  gap: 22px;
   text-align: left;
 }
 
-.lp-testimonial-card {
+.LandingPage-testimonial-card {
   position: relative;
+  display: flex;
   min-width: 0;
-  height: 190px;
-  overflow: hidden;
-  padding: 24px 20px 5px;
+  min-height: 220px;
+  flex-direction: column;
+  padding: 23px 20px;
   border: 1px solid #7188aa;
-  border-radius: 25px;
+  border-radius: 22px;
   background: #142d59;
   color: #fff;
 }
 
-.lp-quote-mark {
+.LandingPage-quote-mark {
   position: absolute;
   top: 4px;
   right: 16px;
-  color: #273b63;
+  color: #526587;
   font-family: Georgia, serif;
   font-size: 54px;
   font-weight: 700;
-  line-height: 1;
 }
 
-.lp-testimonial-person {
+.LandingPage-testimonial-person {
   position: relative;
   z-index: 1;
   display: flex;
-  min-height: 70px;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
-.lp-avatar {
+.LandingPage-avatar {
   display: flex;
-  width: 70px;
-  height: 70px;
-  flex: 0 0 auto;
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
-.lp-avatar img {
-  width: 70px;
-  height: 70px;
+.LandingPage-avatar img {
+  width: 65px;
+  height: 65px;
   object-fit: contain;
 }
 
-.lp-person-details {
-  z-index: 1;
+.LandingPage-person-details {
   min-width: 0;
 }
 
-.lp-stars {
-  color: #c4c7ce;
-  font-size: 11px;
-  line-height: 1;
+.LandingPage-stars {
+  color: #ffc94d;
+  font-size: 13px;
 }
 
-.lp-person-details h3 {
-  margin: 3px 0;
-  color: #e5e9f1;
-  font-size: 11px;
+.LandingPage-person-details h3 {
+  margin: 5px 0;
+  color: #fff;
+  font-size: 13px;
   font-weight: 600;
 }
 
-.lp-person-details p {
+.LandingPage-person-details p {
   margin: 0;
-  color: #7e8cac;
-  font-size: 7px;
-  white-space: nowrap;
+  color: #b1bdd4;
+  font-size: 10px;
+  line-height: 1.4;
 }
 
-.lp-testimonial-card blockquote {
+.LandingPage-testimonial-card blockquote {
   position: relative;
   z-index: 1;
-  margin: 10px 0 0;
-  color: #8794b3;
-  font-size: 10px;
+  margin: 16px 0 0;
+  color: #d0d8e8;
+  font-size: 12px;
   font-style: italic;
-  line-height: 1.35;
+  line-height: 1.6;
 }
 
-.lp-companies-section {
-  min-height: 175px;
-  padding: 31px 6% 22px;
+
+.LandingPage-companies-section {
+  width: 100%;
+  padding: 35px 6%;
   border-top: 2px solid #7384a2;
-  background: linear-gradient(105deg, #2e4771 0%, #7d8ba7 100%);
+  background: linear-gradient(
+    105deg,
+    #2e4771 0%,
+    #7d8ba7 100%
+  );
   color: #fff;
   text-align: center;
 }
 
-.lp-companies-eyebrow {
-  margin: 0 0 23px;
-  color: #333334;
-  font-size: 14px;
-  font-weight: 700;
+.LandingPage-companies-eyebrow {
+  margin: 0 0 18px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
   letter-spacing: 2px;
 }
 
-.lp-companies-section h2 {
+.LandingPage-companies-section h2 {
   margin: 0 0 30px;
   color: #132a56;
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 700;
   letter-spacing: 1.4px;
 }
 
-.lp-company-list {
+.LandingPage-company-list {
   display: flex;
+  width: 100%;
   max-width: 1110px;
-  height: 25px;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  gap: 20px;
+  gap: 25px;
   margin: 0 auto;
 }
 
-.lp-company-item {
+.LandingPage-company-item {
   display: flex;
-  min-width: 0;
-  height: 100%;
-  flex: 1 1 0;
+  min-width: 70px;
+  min-height: 45px;
+  flex: 1 1 90px;
   align-items: center;
   justify-content: center;
 }
 
-.lp-company-item img {
+.LandingPage-company-item img {
   width: auto;
   max-width: 110px;
-  height: 39px;
+  max-height: 42px;
   object-fit: contain;
 }
 
-.lp-training-anchor {
-  height: 30px;
+.LandingPage-training-anchor {
+  min-height: 20px;
 }
 
-.lp-page .LandingPage-footer {
+
+.LandingPage-page .LandingPage-footer {
+  width: 100%;
   min-height: 270px;
-  margin-top: 0;
-  padding: 31px 6.2% 18px;
-  background: linear-gradient(105deg, #081633 0%, #1c294b 100%);
+  padding: 40px 6.2% 20px;
+  background: linear-gradient(
+    105deg,
+    #081633 0%,
+    #1c294b 100%
+  );
   color: #d4d9e6;
 }
 
-.lp-page .LandingPage-footerColumns {
+.LandingPage-page .LandingPage-footerColumns {
   display: grid;
-  min-height: 132px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 45px;
+  padding-bottom: 30px;
 }
 
-.lp-page .LandingPage-footerColumn {
+.LandingPage-page .LandingPage-footerColumn {
   display: flex;
   min-width: 0;
   flex-direction: column;
 }
 
-.lp-page .LandingPage-footerHeading {
-  margin: 0 0 19px;
+.LandingPage-page .LandingPage-footerHeading {
+  margin: 0 0 20px;
   color: #fff;
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
 }
 
-.lp-page .LandingPage-footerLink,
-.lp-page .LandingPage-legalLink {
+.LandingPage-page .LandingPage-footerLink,
+.LandingPage-page .LandingPage-legalLink {
   display: block;
   width: fit-content;
-  margin: 0 0 10px;
+  margin-bottom: 12px;
   color: #aeb8cc;
-  font-size: 8px;
-  line-height: 1.4;
+  font-size: 11px;
+  line-height: 1.5;
   text-decoration: none;
 }
 
-.lp-page .LandingPage-footerLink:hover,
-.lp-page .LandingPage-legalLink:hover {
+.LandingPage-page .LandingPage-footerLink:hover,
+.LandingPage-page .LandingPage-legalLink:hover {
   color: #fff;
 }
 
-.lp-page .LandingPage-legalList {
+.LandingPage-page .LandingPage-legalList {
   display: flex;
   flex-direction: column;
 }
 
-.lp-page .LandingPage-legalIndent {
-  margin-left: 0;
-}
-
-.lp-page .LandingPage-footerDivider {
-  height: 3px;
-  margin-top: 0;
+.LandingPage-page .LandingPage-footerDivider {
+  width: 100%;
+  height: 2px;
   background: #283552;
 }
 
-.lp-page .LandingPage-footerBottom {
+.LandingPage-page .LandingPage-footerBottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 13px;
+  gap: 15px;
+  padding-top: 20px;
 }
 
-.lp-page .LandingPage-copyright {
+.LandingPage-page .LandingPage-copyright {
   margin: 0;
-  color: #8190aa;
-  font-size: 7px;
+  color: #aeb8cc;
+  font-size: 10px;
 }
 
-.lp-page .LandingPage-social {
+.LandingPage-page .LandingPage-social {
   display: flex;
   align-items: center;
   gap: 17px;
 }
 
-.lp-page .LandingPage-social a {
+.LandingPage-page .LandingPage-social a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-.lp-page .LandingPage-social img {
-  width: 14px;
-  height: 14px;
+.LandingPage-page .LandingPage-social img {
+  width: 18px;
+  height: 18px;
   object-fit: contain;
 }
 
-@media (min-width: 1500px) {
-  .lp-header {
-    height: 64px;
-    padding-right: 28px;
-    padding-left: 28px;
+
+@media (max-width: 1000px) {
+
+  .LandingPage-header {
+    gap: 10px;
+    padding: 12px 14px;
   }
 
-  .lp-brand {
-    font-size: 14px;
-  }
-
-  .lp-navigation {
-    margin-right: 28px;
-    margin-left: 28px;
-  }
-
-  .lp-nav-link {
+  .LandingPage-brand {
+    min-width: auto;
     font-size: 11px;
   }
 
-  .lp-login-button,
-  .lp-register-button {
-    min-width: 90px;
-    height: 31px;
-    font-size: 12px;
+  .LandingPage-navigation {
+    gap: 12px;
+    margin: 0 8px;
   }
 
-  .lp-hero {
-    min-height: 430px;
+  .LandingPage-nav-link {
+    font-size: 9px;
   }
 
-  .lp-features-section {
-    padding-top: 40px;
-    padding-bottom: 34px;
-  }
-
-  .lp-feature-card {
-    height: 205px;
-  }
-
-  .lp-testimonial-card {
-    height: 195px;
-  }
-
-  .lp-success-section {
-    padding-top: 65px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .lp-header {
-    gap: 10px;
-    padding-right: 14px;
-  }
-
-  .lp-brand {
-    min-width: auto;
-    font-size: 10px;
-  }
-
-  .lp-navigation {
-    gap: 15px;
-    margin-right: 8px;
-    margin-left: 8px;
-  }
-
-  .lp-nav-link {
-    font-size: 8px;
-  }
-
-  .lp-login-button,
-  .lp-register-button {
+  .LandingPage-login-button,
+  .LandingPage-register-button {
     min-width: 55px;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding: 0 10px;
   }
 
-  .lp-hero {
-    gap: 20px;
+  .LandingPage-hero {
     padding-right: 6%;
     padding-left: 6%;
   }
 
-  .lp-feature-grid {
+  .LandingPage-feature-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 13px;
   }
 
-  .lp-feature-card h3 {
-    min-height: 30px;
-    margin-bottom: 8px;
-    font-size: 12px;
-    white-space: normal;
+  .LandingPage-feature-card {
+    min-height: 190px;
+    padding: 18px 8px;
   }
 
-  .lp-feature-card p {
+  .LandingPage-feature-card h3 {
     font-size: 11px;
   }
 
-  .lp-testimonial-card {
-    padding: 18px 15px;
+  .LandingPage-feature-card p {
+    font-size: 10px;
   }
 
-  .lp-testimonial-person {
-    gap: 9px;
+  .LandingPage-testimonial-grid {
+    gap: 14px;
   }
 
-  .lp-person-details p {
-    white-space: normal;
+  .LandingPage-testimonial-card {
+    padding: 18px 14px;
+  }
+
+  .LandingPage-company-list {
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+
+  .LandingPage-company-item {
+    min-width: 0;
+    flex: 1 1 0;
+  }
+
+  .LandingPage-company-item img {
+    max-width: 80px;
+  }
+
+  .LandingPage-page .LandingPage-footerColumns {
+    gap: 25px;
   }
 }
 
-@media (min-width: 701px) and (max-width: 1000px) {
-  .lp-hero {
-    min-height: 368px;
-  }
-
-  .lp-feature-grid {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-
-  .lp-feature-card {
-    width: auto;
-  }
-
-  .lp-testimonial-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .lp-testimonial-card {
-    width: auto;
-  }
-
-  .lp-page .LandingPage-footerColumns {
-    gap: 20px;
-  }
-}
 
 @media (max-width: 700px) {
-  .lp-header {
-    height: auto;
-    min-height: 60px;
+
+  .LandingPage-header {
+    min-height: 65px;
     flex-wrap: wrap;
     padding: 10px 14px;
   }
 
-  .lp-brand {
+  .LandingPage-brand {
     flex: 1;
+    font-size: 12px;
   }
 
-  .lp-navigation {
+  .LandingPage-brand img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .LandingPage-header-actions {
+    gap: 7px;
+  }
+
+  .LandingPage-login-button,
+  .LandingPage-register-button {
+    min-width: 55px;
+    min-height: 33px;
+    font-size: 11px;
+  }
+
+  .LandingPage-navigation {
     order: 3;
-    height: 28px;
-    flex-basis: 100%;
+    width: 100%;
+    height: 38px;
+    flex: 0 0 100%;
     justify-content: flex-start;
     overflow-x: auto;
-    gap: 25px;
+    overflow-y: hidden;
+    gap: 24px;
     margin: 0;
+    scrollbar-width: none;
   }
 
-  .lp-nav-link {
+  .LandingPage-nav-link {
+    min-height: 35px;
+    flex-shrink: 0;
     font-size: 10px;
   }
 
-  .lp-nav-link.lp-active::after {
+  .LandingPage-nav-link.LandingPage-active::after {
     bottom: 0;
   }
 
-  .lp-hero {
+  .LandingPage-hero {
     grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 42px 8%;
+    gap: 25px;
+    padding: 40px 7%;
   }
 
-  .lp-hero h1 {
-    font-size: 30px;
+  .LandingPage-hero h1 {
+    font-size: 32px;
   }
 
-  .lp-hero-description {
-    font-size: 13px;
+  .LandingPage-hero-description {
+    font-size: 14px;
   }
 
-  .lp-hero-image img {
-    height: 220px;
+  .LandingPage-hero-image img {
+    width: 100%;
+    max-height: 240px;
   }
 
-  .lp-features-section {
-    padding: 35px 6%;
+  .LandingPage-features-section {
+    padding: 40px 6%;
   }
 
-  .lp-feature-grid {
+  .LandingPage-feature-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px;
   }
 
-  .lp-feature-card {
-    height: 180px;
+  .LandingPage-feature-card {
+    min-height: 185px;
+    padding: 18px 10px;
   }
 
-  .lp-feature-card:last-child {
+  .LandingPage-feature-card:last-child {
+    grid-column: 1 / -1;
     width: 100%;
     max-width: calc(50% - 7px);
-    grid-column: 1 / -1;
     justify-self: center;
   }
 
-  .lp-success-section {
+  .LandingPage-success-section {
     padding: 42px 6%;
   }
 
-  .lp-testimonial-grid {
+  .LandingPage-testimonial-grid {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 17px;
   }
 
-  .lp-testimonial-card {
-    width: 100%;
-    height: auto;
-    min-height: 165px;
+  .LandingPage-testimonial-card {
+    min-height: 190px;
     padding: 22px;
   }
 
-  .lp-testimonial-card blockquote {
+  .LandingPage-testimonial-card blockquote {
+    font-size: 12px;
+  }
+
+  .LandingPage-companies-section {
+    padding: 32px 6%;
+  }
+
+  .LandingPage-company-list {
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .LandingPage-company-item {
+    min-width: 75px;
+    flex: 0 1 25%;
+  }
+
+  .LandingPage-company-item img {
+    max-width: 85px;
+  }
+
+  .LandingPage-page .LandingPage-footer {
+    padding: 32px 7% 20px;
+  }
+
+  .LandingPage-page .LandingPage-footerColumns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 20px;
+  }
+
+  .LandingPage-page .LandingPage-footerHeading {
+    margin-bottom: 14px;
     font-size: 11px;
   }
 
-  .lp-companies-section {
-    height: auto;
-    padding: 30px 6%;
+  .LandingPage-page .LandingPage-footerLink,
+  .LandingPage-page .LandingPage-legalLink {
+    font-size: 10px;
   }
 
-  .lp-company-list {
-    height: auto;
+  .LandingPage-page .LandingPage-footerBottom {
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 22px 28px;
-  }
-
-  .lp-company-item {
-    min-width: 70px;
-    flex: 0 1 20%;
-  }
-
-  .lp-company-item img {
-    max-width: 80px;
-  }
-
-  .lp-training-anchor {
-    height: 20px;
-  }
-
-  .lp-page .LandingPage-footer {
-    padding: 30px 7% 18px;
-  }
-
-  .lp-page .LandingPage-footerColumns {
-    min-height: 0;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 28px;
-    padding-bottom: 25px;
-  }
-
-  .lp-page .LandingPage-footerBottom {
-    margin-top: 0;
-  }
-
-  .lp-page .LandingPage-footerHeading {
-    margin-bottom: 13px;
+    padding-top: 17px;
   }
 }
 
+
 @media (max-width: 380px) {
-  .lp-login-button,
-  .lp-register-button {
-    min-width: 48px;
-    padding-right: 8px;
-    padding-left: 8px;
+
+  .LandingPage-header {
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
-  .lp-feature-grid {
+  .LandingPage-brand {
+    gap: 7px;
+    font-size: 10px;
+  }
+
+  .LandingPage-login-button,
+  .LandingPage-register-button {
+    min-width: 48px;
+    padding: 0 7px;
+    font-size: 10px;
+  }
+
+  .LandingPage-feature-grid {
     grid-template-columns: 1fr;
   }
 
-  .lp-feature-card,
-  .lp-feature-card:last-child {
+  .LandingPage-feature-card,
+  .LandingPage-feature-card:last-child {
     width: 100%;
     max-width: none;
     grid-column: auto;
   }
 
-  .lp-hero-actions {
+  .LandingPage-hero h1 {
+    font-size: 28px;
+  }
+
+  .LandingPage-hero-actions {
     gap: 10px;
   }
 
-  .lp-primary-button,
-  .lp-secondary-button {
-    padding-right: 16px;
-    padding-left: 16px;
+  .LandingPage-primary-button,
+  .LandingPage-secondary-button {
+    padding: 0 15px;
+    font-size: 12px;
   }
 
-  .lp-page .LandingPage-footerColumns {
-    gap: 24px 15px;
+  .LandingPage-page .LandingPage-footerColumns {
+    gap: 25px 12px;
   }
 }
 
+
 @media (prefers-reduced-motion: reduce) {
-  .lp-page *,
-  .lp-page *::before,
-  .lp-page *::after {
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .LandingPage-page *,
+  .LandingPage-page *::before,
+  .LandingPage-page *::after {
+    transition: none !important;
+    animation: none !important;
   }
 }
