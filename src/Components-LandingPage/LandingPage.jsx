@@ -53,20 +53,21 @@ const testimonials = [
     name: "Sarah Chen",
     role: "Product Designer @ Aura Systems",
     quote:
-      "ConnectHire transformed my job search. The AI matching felt intuitive, and within two weeks, I was interviewed and hired by my dream company in fintech. The process was seamless.",
+     "\"ConnectHire transformed my job search. The AI matching felt intuitive, and within two weeks, I was interviewed and hired by my dream company in fintech. The process was seamless.\""
   },
   {
     name: "Jhon Francis",
     role: "Recruitment Manager @ Vertex Solutions",
     quote:
-      "The community gave me the confidence to showcase my work and connect with amazing people. I got my first full-time offer within 6 months. The support and guidance here are unmatched.",
+     "\"The community gave me the confidence to showcase my work and connect with amazing people. I got my first full-time offer within 6 months. The support and guidance here are unmatched.\"" 
   },
   {
     name: "David Miller",
     role: "Talent Director @ Zenith Capital",
     quote:
-      "The quality of candidates on ConnectHire is unmatched. We reduced our time-to-hire by 40% and have found some of our most productive team members through their automated screening.",
+       "\"The quality of candidates on ConnectHire is unmatched. We reduced our time-to-hire by 40% and have found some of our most productive team members through their automated screening.\""
   },
+
 ];
 
 const companies = [
@@ -87,7 +88,7 @@ function LandingPage() {
       <header className="Prp-Landing-Page-header">
 
         <a className="Prp-Landing-Page-brand" href="#home">
-          <img src={Home1} alt="Platform logo" />
+          <img src={Home1}  />
 
           <span>
             Placement &
@@ -101,29 +102,29 @@ function LandingPage() {
             Home
           </a>
 
-          <a className="Prp-Landing-Page-nav-link" href="#features">
+          <a className="Prp-Landing-Page-nav-link" >
             Features
           </a>
 
-          <a className="Prp-Landing-Page-nav-link" href="#recruiters">
+          <a className="Prp-Landing-Page-nav-link" >
             For Recruiters/Employers
           </a>
 
-          <a className="Prp-Landing-Page-nav-link" href="#training">
+          <a className="Prp-Landing-Page-nav-link">
             For Training Institutions
           </a>
 
-          <a className="Prp-Landing-Page-nav-link" href="#success">
+          <a className="Prp-Landing-Page-nav-link" >
             Success Stories
           </a>
         </nav>
 
         <div className="Prp-Landing-Page-header-actions">
-          <Link to="/login" className="Prp-Landing-Page-login-button">
+          <Link className="Prp-Landing-Page-login-button">
             Login
           </Link>
 
-          <Link to="/register" className="Prp-Landing-Page-register-button">
+          <Link  className="Prp-Landing-Page-register-button">
             Register
           </Link>
         </div>
