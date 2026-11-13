@@ -9,9 +9,14 @@ import PlacementReset from "./Components-PlacementReset/PlacementReset";
 import ResetPassword from "./ResetPassword/ResetPassword";
 import SuccessfulPage from "./Components-Successfulpage/Successfulpage";
 import Candidate from "./Components-CandidateRegistration/Candidate";
+import CandidateDashboard from "./Components-CandidateDashboard/Candidate";
 import LandingPage from "./Components-LandingPage/LandingPage";
 
 const router = createBrowserRouter([
+	{
+		path: "/candidate-dashboard",
+		element: <CandidateDashboard />,
+	},
 	{
 		path: "/register",
 		element: <Candidate />,

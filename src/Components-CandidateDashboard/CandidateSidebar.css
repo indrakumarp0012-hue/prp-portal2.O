@@ -1,0 +1,116 @@
+.Prp-Candidate-Sidebar {
+  flex: 0 0 clamp(145px, 17%, 230px);
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 18px 12px 24px;
+  background: transparent;
+}
+
+.Prp-Candidate-Sidebar-Navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.Prp-Candidate-Sidebar-NavItem {
+  display: flex;
+  width: 100%;
+  min-height: 27px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 10px;
+  border: 1px solid #536b96;
+  border-radius: 6px;
+  background: #fff;
+  color: #171b24;
+  font: inherit;
+  font-size: 9px;
+  line-height: 1.2;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.Prp-Candidate-Sidebar-NavItem:hover {
+  background: #edf2fb;
+}
+
+.Prp-Candidate-Sidebar-NavItem:focus-visible,
+.Prp-Candidate-Sidebar-Submenu button:focus-visible {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+.Prp-Candidate-Sidebar-Chevron {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  margin: -4px 1px 0 8px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.15s ease;
+}
+
+.Prp-Candidate-Sidebar-Chevron.is-open {
+  margin-top: 4px;
+  transform: rotate(225deg);
+}
+
+.Prp-Candidate-Sidebar-Submenu {
+  display: grid;
+  gap: 4px;
+  padding: 2px 0 3px 10px;
+}
+
+.Prp-Candidate-Sidebar-Submenu button {
+  padding: 5px 8px;
+  border: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.7);
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-size: 9px;
+  text-align: left;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .Prp-Candidate-Sidebar {
+    flex-basis: 135px;
+    padding-right: 9px;
+    padding-left: 9px;
+  }
+}
+
+@media (max-width: 520px) {
+  .Prp-Candidate-Sidebar {
+    flex: 0 0 auto;
+    min-height: 0;
+    padding: 10px;
+  }
+
+  .Prp-Candidate-Sidebar-Navigation {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 6px;
+    padding-bottom: 4px;
+  }
+
+  .Prp-Candidate-Sidebar-NavItem {
+    width: auto;
+    min-height: 30px;
+    flex: 0 0 auto;
+    padding: 6px 9px;
+  }
+
+  .Prp-Candidate-Sidebar-Submenu {
+    position: absolute;
+    z-index: 1;
+    top: 48px;
+    left: 120px;
+    min-width: 145px;
+    border-radius: 5px;
+    background: #536b96;
+  }
+}
